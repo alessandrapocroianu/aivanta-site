@@ -338,7 +338,7 @@ openBtn.addEventListener('click',function(){openW();});
 document.getElementById('hero-ai').addEventListener('click',function(){openW();});
 document.getElementById('close-ai').addEventListener('click',closeD);
 var ct=document.getElementById('contact');
-function setCt(t,p,subj){document.getElementById('ct').textContent=t;document.getElementById('ctp').textContent=p;document.getElementById('gm').href='https://mail.google.com/mail/?view=cm&fs=1&to=Aivantahelp@gmail.com&su='+encodeURIComponent(subj);document.getElementById('mt').href='mailto:Aivantahelp@gmail.com?subject='+encodeURIComponent(subj);}
+function setCt(t,p,subj,body){var b=body?'&body='+encodeURIComponent(body):'';document.getElementById('ct').textContent=t;document.getElementById('ctp').textContent=p;document.getElementById('gm').href='https://mail.google.com/mail/?view=cm&fs=1&to=Aivantahelp@gmail.com&su='+encodeURIComponent(subj)+b;document.getElementById('mt').href='mailto:Aivantahelp@gmail.com?subject='+encodeURIComponent(subj)+b;}
 function openC(){setCt('Contact Aivanta','Email us at Aivantahelp@gmail.com','Aivanta pilot');ct.hidden=false;document.getElementById('gm').focus();}
 function openW(){setCt('Join the waitlist','The drafting assistant is coming soon. Email us at Aivantahelp@gmail.com and we will let you know when it opens.','Aivanta waitlist');ct.hidden=false;document.getElementById('gm').focus();}
 function closeC(){ct.hidden=true;}
